@@ -46,6 +46,10 @@ def hex_to_files():
                                             
                         byte = ""
 
+                print(byte_data)
+
+                input()
+
                 bin_file.write(byte_data)
 
                 input("finished with " + ext)
