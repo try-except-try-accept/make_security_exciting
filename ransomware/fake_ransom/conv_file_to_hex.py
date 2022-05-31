@@ -46,12 +46,22 @@ def hex_to_files():
                                             
                         byte = ""
 
-                print(byte_data)
 
-                input()
+
+
 
                 bin_file.write(byte_data)
 
-                input("finished with " + ext)
+                print("finished with " + ext)
                     
 
+if __name__ == "__main__":
+
+    x = input('''
+1. to convert files to hex
+2. to convert hex to files
+''')
+    if x == '1':
+        files_to_hex()
+    elif x == '2':
+        hex_to_files()
