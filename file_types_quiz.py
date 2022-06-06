@@ -47,9 +47,7 @@ def dir_to_hex(path=None, dump=""):
      
 
 def dump():
-    data = dir_to_hex(rootdir)
-  
-
+    data = dir_to_hex(rootdir) 
     
     return data
 
@@ -162,6 +160,7 @@ def decrypt():
         f = open('dump')
         f.close()
     except FileNotFoundError:
+        input("Can't decrypt! dump not found!")
         exit()
     print("You found the killswitch!")
     print()
