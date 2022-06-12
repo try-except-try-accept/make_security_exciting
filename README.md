@@ -1,4 +1,4 @@
-# security_activity_test
+# make_security_exciting
 Ideas for new KS3 teaching resources on 'security'
 
 // All students informed at the start of the lesson that activities are not to be repeated outside of the classroom.
