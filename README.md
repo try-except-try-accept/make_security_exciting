@@ -7,10 +7,10 @@ Ideas for new KS3 teaching resources on 'security'
 
 Students get a new sandbox account and explore the 'mystery' files contained on the user's drive. They are then told to download and complete a quiz about file names, types etc - but this is instead a Python script that encrypts the files they have been looking at (WannaCry style).
 
-![intro](readme_assets/{01-intro.gif})
-![exploring files](readme_assets/{02-explore-files.gif})
-![ransomware attack!](readme_assets/{03-ransomware-attack.gif})
-![killswitch engaged](readme_assets/{04-killswitch-engaged.gif})
+![intro](readme_assets/01-intro.gif)
+![exploring files](readme_assets/02-explore-files.gif)
+![ransomware attack!](readme_assets/03-ransomware-attack.gif)
+![killswitch engaged](readme_assets/04-killswitch-engaged.gif)
 
 ### Items for discussion:
 
