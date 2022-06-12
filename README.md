@@ -22,4 +22,11 @@ Students get a new sandbox account and explore the 'mystery' files contained on 
 >>>
 
 ## fake_ddos.py
-Discussion around how sending repeated GET request to a server does not lead to a successful DOS attack.
+Discussion around how sending repeated GET request to a server does not lead to a successful DoS attack.
+
+// tbc... not very successful in current form
+
+- `requests` libary was only installed in school on Python 3.10
+- old versions of Python still lingering, confusing Year 8 students!
+- it's not clear what the outcome of the task is to non-programmers
+- need to set up a dummy network (a LAN of RPis?) to model an actual (D)DoS attack?
